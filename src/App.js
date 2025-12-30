@@ -8,6 +8,8 @@ import useThemeStore from './store/themeStore';
 import AuthInitializer from './components/AuthInitializer';
 import MobileBlocker from './components/MobileBlocker';
 import { RootPage } from './pages/RootPage';
+import { ProtectedRoute } from './auth'
+import { NotFoundPage } from './pages/NotFoundPage';
 
 
 export default function App() {
@@ -37,9 +39,9 @@ export default function App() {
             
             <Route path="/recovery" element={<KeyRecoveryPortal />} />
 
-            <Route path="/oauth/callback" element={<OAuthCallback />} />
+            <Route path="/oauth/callback" element={<OAuthCallback />} />*/}
 
-            <Route path="*" element={<ProtectedRoute requiredStatus="completed"><NotFoundView /></ProtectedRoute>} /> */}
+            <Route path="*" element={<ProtectedRoute requiredStatus="completed"><NotFoundPage /></ProtectedRoute>} /> 
           </Routes>
         </Router>
       </AuthInitializer>

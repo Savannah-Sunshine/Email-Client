@@ -1,0 +1,96 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 40px 64px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+}
+.title{
+  font-size: 16px;
+  gap: 8px;
+  margin-left: 40px;
+  font-weight: 300;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  position: absolute;
+  left: 64px;
+}
+
+.logo img {
+  width: 23px;
+  height: 18px;
+}
+
+.logo h1 {
+  font-size: 16px;
+  color: var(--color-gray-50);
+  font-weight: 400;
+  margin: 0;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  justify-content: center;
+  margin-right: 265px;
+}
+
+.navLinks a {
+  color: var(--color-gray-50);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+
+.navLinks a:hover {
+  color: var(--color-gray-50);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.getStartedButton {
+  position: absolute;
+  top: 45px;
+  right: 40px;
+  background: none;
+  border: 1px solid #d3cfda;
+  border-radius: 4px;
+  height: 32px;
+  width: 85px;
+  color: var(--color-gray-50);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  z-index: 1000;
+}
+
+.getStartedButton i {
+  margin-left: 2px;
+  border-radius: 50%;
+  border: none;
+  padding: 7px;
+  font-size: 10px;
+}
+
+.getStartedButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

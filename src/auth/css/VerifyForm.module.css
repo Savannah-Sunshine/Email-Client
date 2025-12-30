@@ -1,0 +1,97 @@
+.verifyForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.logo {
+  width: 65px;
+  height: 65px;
+  color: var(--color-gray-50);
+  background-color: var(--color-gray-0);
+}
+
+.title {
+  font-size: var(--font-size-display-large);
+  font-weight: 500;
+  margin: 27px 0;  
+  margin-top: 10px;
+}
+
+.checkEmail{
+  color: var(--color-gray-100);
+  font-size: 16px;
+  margin: 0;
+}
+
+.emailHighlight{
+  color: var(--primary-brand-color); 
+  font-weight: 600; 
+}
+
+.codeInputs {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  margin-bottom: 30px;
+}
+
+.codeInput {
+  width: 40px;
+  height: 40px;
+  margin:  4px;
+  padding: 2px;
+  
+  text-align: center;
+  font-size: 18px;
+  border: none; 
+  
+  border: 1px solid rgb(105, 105, 105);
+  border-radius: 8px;
+  background: none;
+  color: var(--color-gray-100);
+  outline: none;
+} 
+
+.secondary_button {
+  background-color: var(--primary-btn-bg-color);
+  color: var(--color-gray-50);
+  
+  width: 180px;
+  width: 250px;
+  height: 35px;
+  margin: 0 10px;
+  
+  border-radius: var(--border-radius-10);
+  border: none;
+  cursor: pointer;
+}
+
+.verifyButton:hover {
+  background-color: var(--primary-btn-bg-color);
+}
+
+.resendButton {
+  background: none;
+  outline: none;
+  border: none;
+
+  color: var(--color-gray-100);
+  font-size: 12px;
+  /* margin-top: 30px; */
+  cursor: pointer;
+}
+
+.resendLinkBtn {
+  text-decoration: underline;
+}
+
+.message {
+  margin-top: 30px;
+}
+
+.error {
+  color: red;
+}

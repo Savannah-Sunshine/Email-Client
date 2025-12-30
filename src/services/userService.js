@@ -73,7 +73,7 @@ const updateOnboardingStatus = async (userID, status) => {
 };
 
 // If adding new email, call emailService
-const updateUser = async (userId, displayName, imageUrl) => {
+const updateUser = async (userID, displayName, imageUrl) => {
     try {
         const response = await fetch(`${process.env.REACT_APP_API_URL}user/update/profile`, {
             method: "PUT",
@@ -81,7 +81,7 @@ const updateUser = async (userId, displayName, imageUrl) => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                userId,
+                userID,
                 imageUrl,
             }),
         });

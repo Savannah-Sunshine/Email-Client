@@ -1,10 +1,10 @@
 // import imageCompression from 'browser-image-compression';
 
-const fetchUserEmailSpaces = async (userId) => {
+const fetchUserEmailSpaces = async (userID) => {
   try {
     // TODO: VERY IMPORTANT THAT ONLY USER GETS OWN EMAILS, ADD AUTHENTICATION !! WITH JWT :)
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}emails/get-user-emails?userId=${encodeURIComponent(userId)}`
+      `${process.env.REACT_APP_API_URL}emails/get-user-emails?userID=${encodeURIComponent(userID)}`
     );
 
     if (!response.ok) {
@@ -25,7 +25,7 @@ const fetchUserEmailSpaces = async (userId) => {
   }
 }; 
 
-const createNewEmailSpace = async (userId, emailAddress, description) => {
+const createNewEmailSpace = async (userID, emailAddress, description) => {
     try {
         const response = await fetch(
             `${process.env.REACT_APP_API_URL}emails/create-emailspace`, {
@@ -34,7 +34,7 @@ const createNewEmailSpace = async (userId, emailAddress, description) => {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    userId,
+                    userID,
                     emailAddress,
                     description
                 }),
@@ -53,4 +53,25 @@ const createNewEmailSpace = async (userId, emailAddress, description) => {
     }
 }
 
-export { fetchUserEmailSpaces, createNewEmailSpace }; 
+const getLastActiveEmailSpace = async (userID) => {
+  try {
+    const response = await fetch(
+      `${process.env.REACT_APP_API_URL}emails/get-last-active-space?userID=${encodeURIComponent(
+        userID
+      )}`
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "Failed to fetch onboarding status");
+    }
+
+    return data.last_active_space_id;
+  } catch (error) {
+    console.error("Error fetching onboarding status:", error);
+    throw error;
+  }
+};
+
+export { fetchUserEmailSpaces, createNewEmailSpace, getLastActiveEmailSpace }; 

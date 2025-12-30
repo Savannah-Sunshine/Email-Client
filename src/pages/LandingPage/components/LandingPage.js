@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
-// import Navbar from '../../../components/Navbar';
-// import styles from "../css/LandingPage.module.css";
+import Navbar from '../../../components/Navbar';
+import styles from "../css/LandingPage.module.css";
 // import styles from "../css/LandingPageLight.module.css";
 import useAuthStore from '../../../store/authStore';
 import { setStoredAccounts } from '../../../utils/accountStorage';
-// import Footer from '../../../components/Footer';
+import Footer from '../../../components/Footer';
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -15,7 +15,11 @@ const LandingPage = () => {
   }
 
   return (
-    <div>Hello Landing Page</div>
+    <div className={styles.landingPage}>
+      <Navbar />
+      <div> hello</div>
+      <Footer />
+    </div>
   );
 };
 
