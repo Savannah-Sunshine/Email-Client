@@ -1,0 +1,11 @@
+{
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "source": "/health",
+      "destination": "/health.html"
+    }
+  ]
+}
